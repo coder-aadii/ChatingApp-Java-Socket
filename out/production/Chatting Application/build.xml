@@ -1,0 +1,13 @@
+<project name="ChattingApplication" default="compile" basedir=".">
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}"/>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="Main" classpath="${build.dir}"/>
+    </target>
+</project>
